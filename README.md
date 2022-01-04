@@ -19,10 +19,25 @@ javac -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3
 ```
 java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-proto.jar:src JBinlogDumpK -b 127.0.0.1:9092 -s qdecoder,schema2
 ```
+参数说明:
+
+ -h 显示帮助信息
+ 
+ -b kafka.bootstrap.server, 默认是127.0.0.1：9092
+ 
+ -s 指定oracle schema，多个schema用逗号分隔。QDecoder会将每一个schema下的所有table的binlog写入一个kafka topic，所以，必须指定要读取哪些schema的binlog。
+
 
 ## 3. 运行JBinlogDumpS: 从socket读取binlog并打印出来
 
 ```
 java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-proto.jar:src JBinlogDumpS -a 127.0.0.1:9191
 ```
+
+参数说明:
+
+  -h 显示帮助信息
+  
+  -a binlog server的地址和端口号，默认是127.0.0.1:9191。当QDecoder输出到socket时，默认会绑定9191端口。
+
 
