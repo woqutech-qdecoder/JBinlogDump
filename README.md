@@ -23,6 +23,6 @@ java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3
 ## 3. 运行JBinlogDumpS: 从socket读取binlog并打印出来
 
 ```
-java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-binlog.jar:src JBinlogDumpS -a 127.0.0.1:9192
+java  -cp .:lib/commons-cli-1.5.0.jar:lib/protobuf-3.6.1.jar:lib/kafka-clients-3.0.0.jar:lib/log4j-1.2.17.jar:lib/slf4j-api-1.7.30.jar:lib/slf4j-log4j12-1.7.30.jar:lib/qdecoder-binlog.jar:src JBinlogDumpS -a 127.0.0.1:9191
 ```
 
